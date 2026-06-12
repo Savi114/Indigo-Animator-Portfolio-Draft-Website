@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Indigo | Anime Art Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="cursor-glow"></div>
+  <div class="grain"></div>
+
+  <header class="site-header">
+    <a href="#top" class="brand" aria-label="Indigo home">
+      <span class="brand-mark">藍</span>
+      <span>Indigo</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#info">Info & Contact</a>
+      <a href="#featured" class="pill-link">Featured</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="hero section-pad">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Anime Illustrator • Character Artist • Visual Storyteller</p>
+
+        <h1>Bold anime-inspired art with fire, fantasy, chaos, and emotion.</h1>
+
+        <p class="hero-text">
+          A portfolio draft for an artist creating expressive anime-style illustrations,
+          surreal characters, and visually intense original pieces.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#work" class="button primary">View Work</a>
+          <a href="#info" class="button ghost">Contact</a>
+        </div>
+      </div>
+
+      <div class="hero-art reveal">
+        <div class="hero-image-card">
+          <img src="images/Flame_Of_2025.jpeg" alt="Flame of 2025 anime-style artwork">
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" class="featured-section section-pad reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Featured</p>
+        <h2>Illustration reel / process video placeholder.</h2>
+      </div>
+
+      <div class="featured-card">
+        <button class="play-button" aria-label="Play reel preview">▶</button>
+
+        <div>
+          <h3>Art Process Reel</h3>
+          <p>
+            This can later be replaced with a YouTube, Vimeo, Instagram Reel, TikTok,
+            or MP4 process video showing sketches, speedpaints, or animations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="work section-pad">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Selected Work</p>
+        <h2>Original art pieces, character concepts, and anime-inspired visuals.</h2>
+      </div>
+
+      <div class="filter-row reveal" aria-label="Portfolio filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="illustration">Illustration</button>
+        <button class="filter-btn" data-filter="character">Character</button>
+        <button class="filter-btn" data-filter="concept">Concept</button>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <article class="project-card reveal" data-category="illustration">
+          <div class="thumb image-thumb">
+            <img src="images/Flame_Of_2025.jpeg" alt="Flame of 2025 anime-style artwork">
+          </div>
+
+          <div class="project-info">
+            <p>Original illustration</p>
+            <h3>Flame of 2025</h3>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="illustration">
+          <div class="thumb image-thumb">
+            <img src="images/Chainsawman_Art.jpeg" alt="Anime-inspired pool scene artwork">
+          </div>
+
+          <div class="project-info">
+            <p>Anime-inspired illustration</p>
+            <h3>Poolside Chaos</h3>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="illustration">
+          <div class="thumb image-thumb">
+            <img src="images/Buff_Fighter_Art.jpeg" alt="And The Rainbow anime-style artwork">
+          </div>
+
+          <div class="project-info">
+            <p>Poster illustration</p>
+            <h3>And The Rainbow</h3>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="character">
+          <div class="thumb image-thumb">
+            <img src="images/Ruin_Gaurd_Art.jpeg" alt="Ruin Guard anime character artwork">
+          </div>
+
+          <div class="project-info">
+            <p>Character concept</p>
+            <h3>Ruin Guard</h3>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="concept">
+          <div class="thumb image-thumb">
+            <img src="images/Halloween_Art.jpeg" alt="Halloween anime character concept artwork">
+          </div>
+
+          <div class="project-info">
+            <p>Concept sketch</p>
+            <h3>Halloween Spirit</h3>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="info" class="info section-pad reveal">
+      <div class="info-card">
+        <div>
+          <p class="eyebrow">Info & Contact</p>
+
+          <h2>Hi, I’m Indigo.</h2>
+
+          <p>
+            I’m an anime-inspired illustrator and character artist creating bold,
+            surreal, and emotional visual pieces. My work focuses on expressive
+            characters, dramatic color, fantasy elements, and strong visual storytelling.
+          </p>
+
+          <p>
+            This is a draft portfolio website. The name, email, and social links can be
+            replaced later with the artist’s real information.
+          </p>
+        </div>
+
+        <div class="contact-panel">
+          <a href="#">hello@indigoart.com</a>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">YouTube</a>
+          <a href="#">ArtStation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Indigo. Draft portfolio concept.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
