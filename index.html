@@ -11,6 +11,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -19,7 +21,7 @@
   <div class="grain"></div>
 
   <header class="site-header">
-    <a href="#top" class="brand" aria-label="Indigo home">
+    <a href="index.html#top" class="brand" aria-label="Indigo home">
       <span class="brand-mark">藍</span>
       <span>Indigo</span>
     </a>
@@ -30,11 +32,11 @@
     </button>
 
     <nav class="nav-links">
-      <a href="#featured">Reel</a>
-      <a href="#work">Work</a>
-      <a href="#sketches">Sketches</a>
-      <a href="#commissions">Commissions</a>
-      <a href="#info" class="pill-link">Contact</a>
+      <a href="animations.html">Animations</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#sketchbook">Sketchbook</a>
+      <a href="index.html#commissions">Commissions</a>
+      <a href="index.html#info" class="pill-link">Contact</a>
     </nav>
   </header>
 
@@ -54,7 +56,10 @@
 
         <div class="hero-actions">
           <a href="#work" class="button primary">View Work</a>
-          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer" class="button ghost">Contact via Gmail</a>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer" class="button ghost">
+            <i class="fa-solid fa-envelope"></i>
+            Contact via Gmail
+          </a>
         </div>
       </div>
 
@@ -67,8 +72,8 @@
 
     <section id="featured" class="featured-section section-pad reveal">
       <div class="section-heading">
-        <p class="eyebrow">Featured Reel</p>
-        <h2>Motion, process, and animation work.</h2>
+        <p class="eyebrow">Featured Animation</p>
+        <h2>Santa Punch animation reel.</h2>
       </div>
 
       <div class="video-feature-card">
@@ -80,15 +85,17 @@
         </div>
 
         <div class="video-copy">
-          <p class="eyebrow">Animation / Process</p>
+          <p class="eyebrow">Animation / Motion Test</p>
           <h3>Santa Punch</h3>
           <p>
-            A short motion piece highlighting Indigo’s action posing, character energy,
-            and anime-inspired movement. This reel section can later include more process
-            videos, speedpaints, or finished animation tests.
+            A short animation piece showing Indigo’s action posing, movement timing,
+            and anime-inspired character energy. See more short animations, motion tests,
+            and sketch scenes on the animation page.
           </p>
 
-          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer" class="button primary small-button">Inquire About Work</a>
+          <a href="animations.html" class="button primary small-button">
+            View More Animations →
+          </a>
         </div>
       </div>
     </section>
@@ -96,20 +103,20 @@
     <section id="work" class="work section-pad">
       <div class="section-heading reveal">
         <p class="eyebrow">Selected Work</p>
-        <h2>Finished illustrations, character art, and sketch studies.</h2>
+        <h2>Illustrations, character concepts, and sketchbook studies.</h2>
       </div>
 
       <div class="filter-row reveal" aria-label="Portfolio filters">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="illustration">Illustrations</button>
-        <button class="filter-btn" data-filter="character">Character Art</button>
-        <button class="filter-btn" data-filter="sketch">Sketches</button>
+        <button class="filter-btn" data-filter="character">Character Concepts</button>
+        <button class="filter-btn" data-filter="sketch">Sketchbook</button>
       </div>
 
       <div class="work-group">
         <div class="work-group-heading reveal">
-          <p class="eyebrow">Finished Illustrations</p>
-          <h3>Polished pieces and poster-style visuals.</h3>
+          <p class="eyebrow">Illustrations</p>
+          <h3>Polished pieces, poster-style visuals, and finished artwork.</h3>
         </div>
 
         <div class="portfolio-grid">
@@ -180,8 +187,8 @@
 
       <div class="work-group">
         <div class="work-group-heading reveal">
-          <p class="eyebrow">Character Art</p>
-          <h3>Character-focused concepts and fantasy designs.</h3>
+          <p class="eyebrow">Character Concepts</p>
+          <h3>Character-focused designs, fantasy figures, and personality-driven visuals.</h3>
         </div>
 
         <div class="portfolio-grid">
@@ -229,10 +236,10 @@
         </div>
       </div>
 
-      <div class="work-group" id="sketches">
+      <div class="work-group" id="sketchbook">
         <div class="work-group-heading reveal">
-          <p class="eyebrow">Sketches / Studies</p>
-          <h3>Line work, pose studies, and visual experiments.</h3>
+          <p class="eyebrow">Sketchbook / Studies</p>
+          <h3>Line work, pose studies, environment sketches, and visual experiments.</h3>
         </div>
 
         <div class="portfolio-grid">
@@ -240,7 +247,7 @@
             class="project-card reveal"
             data-category="sketch"
             data-title="Rainbow Impact Sketch"
-            data-type="Sketch Study"
+            data-type="Pose Study"
             data-year="2025"
             data-medium="Digital sketch"
             data-image="images/Sketch_01.png"
@@ -251,14 +258,14 @@
             </div>
 
             <div class="project-info">
-              <p>Sketch study • 2025</p>
+              <p>Pose study • 2025</p>
               <h3>Rainbow Impact Sketch</h3>
               <span>Open project →</span>
             </div>
           </button>
 
           <button
-            class="project-card reveal"
+            class="project-card reveal wide-card"
             data-category="sketch"
             data-title="Winter Campfire Study"
             data-type="Environment Sketch"
@@ -267,7 +274,7 @@
             data-image="images/Sketch_02.png"
             data-description="A quiet scene study using soft blue tones, snowy space, and a warm fire focal point. The piece explores atmosphere, loneliness, and visual contrast."
           >
-            <div class="thumb image-thumb sketch-thumb wide-thumb">
+            <div class="thumb image-thumb sketch-thumb landscape-thumb">
               <img src="images/Sketch_02.png" alt="Winter campfire anime sketch">
             </div>
 
@@ -282,7 +289,7 @@
             class="project-card reveal"
             data-category="sketch"
             data-title="Quiet Gaze Sketch"
-            data-type="Character Sketch"
+            data-type="Character Study"
             data-year="2025"
             data-medium="Digital line art"
             data-image="images/Sketch_03.png"
@@ -293,7 +300,7 @@
             </div>
 
             <div class="project-info">
-              <p>Character sketch • 2025</p>
+              <p>Character study • 2025</p>
               <h3>Quiet Gaze Sketch</h3>
               <span>Open project →</span>
             </div>
@@ -303,7 +310,7 @@
             class="project-card reveal"
             data-category="sketch"
             data-title="Claw Gesture Study"
-            data-type="Gesture Sketch"
+            data-type="Gesture Study"
             data-year="2025"
             data-medium="Digital line art"
             data-image="images/Sketch_04.png"
@@ -314,7 +321,7 @@
             </div>
 
             <div class="project-info">
-              <p>Gesture sketch • 2025</p>
+              <p>Gesture study • 2025</p>
               <h3>Claw Gesture Study</h3>
               <span>Open project →</span>
             </div>
@@ -328,7 +335,7 @@
             data-year="2025"
             data-medium="Digital sketch"
             data-image="images/Sketch_05.png"
-            data-description="A sketch sheet connected to the Santa Punch reel. It shows action posing, character expression, and motion planning before or during the animation process."
+            data-description="A sketch sheet connected to the Santa Punch animation. It shows action posing, character expression, and motion planning before or during the animation process."
           >
             <div class="thumb image-thumb sketch-thumb">
               <img src="images/Sketch_05.png" alt="Santa Punch sketch sheet">
@@ -367,8 +374,8 @@
         </div>
 
         <div class="service-card">
-          <h3>Process Work</h3>
-          <p>Sketch progress, speedpaint content, short-form art reels, and visual breakdowns.</p>
+          <h3>Animation / Motion</h3>
+          <p>Short motion tests, pose-driven animation clips, action studies, and reel material.</p>
         </div>
       </div>
     </section>
@@ -387,18 +394,22 @@
           </p>
 
           <p>
-            The portfolio highlights original illustrations, character concepts, sketch studies,
-            poster-style artwork, and experimental anime-inspired visuals. For commissions,
+            The portfolio highlights original illustrations, character concepts, sketchbook studies,
+            poster-style artwork, and experimental anime-inspired animation. For commissions,
             collaborations, or creative inquiries, contact Indigo directly by Gmail or Instagram.
           </p>
         </div>
 
         <div class="contact-panel">
-          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer">Open Gmail</a>
-          <a href="https://www.instagram.com/indigo_jp/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="javascript:void(0)" aria-disabled="true">TikTok coming soon</a>
-          <a href="javascript:void(0)" aria-disabled="true">YouTube coming soon</a>
-          <a href="javascript:void(0)" aria-disabled="true">ArtStation coming soon</a>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Open Gmail</span>
+          </a>
+
+          <a href="https://www.instagram.com/indigo_jp/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
         </div>
       </div>
     </section>
@@ -428,7 +439,10 @@
           Project description goes here.
         </p>
 
-        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer" class="button primary">Inquire About Work</a>
+        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer" class="button primary">
+          <i class="fa-solid fa-envelope"></i>
+          Inquire About Work
+        </a>
       </div>
     </div>
   </div>
@@ -437,8 +451,16 @@
     <p>© 2026 Indigo. All rights reserved.</p>
 
     <div class="footer-links">
-      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer">Gmail</a>
-      <a href="https://www.instagram.com/indigo_jp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer">
+        <i class="fa-solid fa-envelope"></i>
+        Gmail
+      </a>
+
+      <a href="https://www.instagram.com/indigo_jp/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram"></i>
+        Instagram
+      </a>
+
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
