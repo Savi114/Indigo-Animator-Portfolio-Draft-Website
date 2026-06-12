@@ -35,9 +35,17 @@ body {
   overflow-x: hidden;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  font: inherit;
 }
 
 img {
@@ -189,6 +197,9 @@ h3 {
 }
 
 .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 15px 20px;
   border-radius: 999px;
   font-weight: 900;
@@ -275,7 +286,9 @@ h3 {
 
 .featured-card p,
 .info-card p,
-.project-info p {
+.project-info p,
+.service-card p,
+.modal-info p {
   color: var(--muted);
   line-height: 1.7;
 }
@@ -311,12 +324,17 @@ h3 {
 }
 
 .project-card {
+  display: block;
+  text-align: left;
+  color: var(--text);
   border-radius: var(--radius);
   overflow: hidden;
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 16px 44px rgba(0, 0, 0, 0.2);
   transition: transform 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+  padding: 0;
 }
 
 .project-card:hover {
@@ -353,6 +371,38 @@ h3 {
   font-size: 0.88rem;
 }
 
+.project-info span {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--cyan);
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+/* Commissions */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.service-card {
+  padding: 26px;
+  border-radius: var(--radius);
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.18);
+}
+
+.service-card h3 {
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  margin: 0;
+}
+
 /* Info section */
 
 .info-card {
@@ -383,6 +433,101 @@ h3 {
   transform: translateX(5px);
 }
 
+/* Project modal */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  padding: 28px;
+}
+
+.modal.open {
+  display: grid;
+  place-items: center;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 3, 12, 0.78);
+  backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  position: relative;
+  z-index: 101;
+  width: min(1120px, 96vw);
+  max-height: 90vh;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 28px;
+  padding: 24px;
+  border-radius: 34px;
+  background: rgba(24, 14, 42, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: var(--shadow);
+}
+
+.modal-close {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  z-index: 102;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.modal-image-wrap {
+  border-radius: 26px;
+  overflow: hidden;
+  background: #111;
+  max-height: 78vh;
+}
+
+.modal-image-wrap img {
+  width: 100%;
+  height: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  display: block;
+  background: #111;
+}
+
+.modal-info {
+  align-self: center;
+  padding: 20px;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.project-meta span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 0.88rem;
+}
+
+.modal-info .button {
+  margin-top: 18px;
+}
+
 /* Footer */
 
 .footer {
@@ -390,10 +535,25 @@ h3 {
   z-index: 2;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 18px;
   padding: 34px 6vw;
   color: var(--muted);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-links a {
+  font-weight: 800;
+}
+
+.footer-links a:hover {
+  color: white;
 }
 
 /* Animation classes */
@@ -423,9 +583,23 @@ h3 {
 
 /* Responsive */
 
+@media (max-width: 1150px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 1050px) {
   .portfolio-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .modal-content {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-info {
+    padding: 6px;
   }
 }
 
@@ -489,6 +663,7 @@ h3 {
 
   .footer {
     flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -497,7 +672,8 @@ h3 {
     padding: 70px 5vw;
   }
 
-  .portfolio-grid {
+  .portfolio-grid,
+  .service-grid {
     grid-template-columns: 1fr;
   }
 
@@ -512,5 +688,18 @@ h3 {
 
   h2 {
     font-size: clamp(2rem, 12vw, 3.2rem);
+  }
+
+  .modal {
+    padding: 12px;
+  }
+
+  .modal-content {
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .modal-image-wrap img {
+    max-height: 62vh;
   }
 }
