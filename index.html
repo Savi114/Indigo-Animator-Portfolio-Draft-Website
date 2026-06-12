@@ -30,10 +30,11 @@
     </button>
 
     <nav class="nav-links">
+      <a href="#featured">Reel</a>
       <a href="#work">Work</a>
+      <a href="#sketches">Sketches</a>
       <a href="#commissions">Commissions</a>
-      <a href="#info">Info & Contact</a>
-      <a href="#featured" class="pill-link">Featured</a>
+      <a href="#info" class="pill-link">Contact</a>
     </nav>
   </header>
 
@@ -53,7 +54,7 @@
 
         <div class="hero-actions">
           <a href="#work" class="button primary">View Work</a>
-          <a href="mailto:indigoblade609@gmail.com" class="button ghost">Contact</a>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer" class="button ghost">Contact via Gmail</a>
         </div>
       </div>
 
@@ -66,20 +67,28 @@
 
     <section id="featured" class="featured-section section-pad reveal">
       <div class="section-heading">
-        <p class="eyebrow">Featured</p>
-        <h2>Illustration reel / process video placeholder.</h2>
+        <p class="eyebrow">Featured Reel</p>
+        <h2>Motion, process, and animation work.</h2>
       </div>
 
-      <div class="featured-card">
-        <button class="play-button" aria-label="Play reel preview">▶</button>
+      <div class="video-feature-card">
+        <div class="video-wrap">
+          <video class="reel-video" autoplay muted loop playsinline preload="auto">
+            <source src="videos/SANTAPUNCH_Indigo_Final.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
-        <div>
-          <h3>Art Process Reel</h3>
+        <div class="video-copy">
+          <p class="eyebrow">Animation / Process</p>
+          <h3>Santa Punch</h3>
           <p>
-            This section can later be replaced with a YouTube, Vimeo, Instagram Reel,
-            TikTok, or MP4 process video showing sketches, speedpaints, character
-            breakdowns, or animation tests.
+            A short motion piece highlighting Indigo’s action posing, character energy,
+            and anime-inspired movement. This reel section can later include more process
+            videos, speedpaints, or finished animation tests.
           </p>
+
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer" class="button primary small-button">Inquire About Work</a>
         </div>
       </div>
     </section>
@@ -87,123 +96,251 @@
     <section id="work" class="work section-pad">
       <div class="section-heading reveal">
         <p class="eyebrow">Selected Work</p>
-        <h2>Original art pieces, character concepts, and anime-inspired visuals.</h2>
+        <h2>Finished illustrations, character art, and sketch studies.</h2>
       </div>
 
       <div class="filter-row reveal" aria-label="Portfolio filters">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="illustration">Illustration</button>
-        <button class="filter-btn" data-filter="character">Character</button>
-        <button class="filter-btn" data-filter="concept">Concept</button>
+        <button class="filter-btn" data-filter="illustration">Illustrations</button>
+        <button class="filter-btn" data-filter="character">Character Art</button>
+        <button class="filter-btn" data-filter="sketch">Sketches</button>
       </div>
 
-      <div class="portfolio-grid">
+      <div class="work-group">
+        <div class="work-group-heading reveal">
+          <p class="eyebrow">Finished Illustrations</p>
+          <h3>Polished pieces and poster-style visuals.</h3>
+        </div>
 
-        <button
-          class="project-card reveal"
-          data-category="illustration"
-          data-title="Flame of 2025"
-          data-type="Original Illustration"
-          data-year="2025"
-          data-medium="Digital illustration"
-          data-image="images/Flame_Of_2025.jpeg"
-          data-description="A fire-themed anime illustration built around intensity, movement, and transformation. The piece uses bright orange flames, sharp contrast, and a direct character pose to create a strong first impression."
-        >
-          <div class="thumb image-thumb">
-            <img src="images/Flame_Of_2025.jpeg" alt="Flame of 2025 anime-style artwork">
-          </div>
+        <div class="portfolio-grid">
+          <button
+            class="project-card reveal"
+            data-category="illustration"
+            data-title="Flame of 2025"
+            data-type="Original Illustration"
+            data-year="2025"
+            data-medium="Digital illustration"
+            data-image="images/Flame_Of_2025.jpeg"
+            data-description="A fire-themed anime illustration built around intensity, movement, and transformation. The piece uses bright orange flames, sharp contrast, and a direct character pose to create a strong first impression."
+          >
+            <div class="thumb image-thumb">
+              <img src="images/Flame_Of_2025.jpeg" alt="Flame of 2025 anime-style artwork">
+            </div>
 
-          <div class="project-info">
-            <p>Original illustration • 2025</p>
-            <h3>Flame of 2025</h3>
-            <span>Open project →</span>
-          </div>
-        </button>
+            <div class="project-info">
+              <p>Original illustration • 2025</p>
+              <h3>Flame of 2025</h3>
+              <span>Open project →</span>
+            </div>
+          </button>
 
-        <button
-          class="project-card reveal"
-          data-category="illustration"
-          data-title="Poolside Chaos"
-          data-type="Anime-inspired Illustration"
-          data-year="2025"
-          data-medium="Digital illustration"
-          data-image="images/Chainsawman_Art.jpeg"
-          data-description="A surreal poolside scene with strong color contrast, expressive characters, and chaotic background energy. The composition mixes playful character interaction with an intense supernatural atmosphere."
-        >
-          <div class="thumb image-thumb">
-            <img src="images/Chainsawman_Art.jpeg" alt="Anime-inspired pool scene artwork">
-          </div>
+          <button
+            class="project-card reveal"
+            data-category="illustration"
+            data-title="Poolside Chaos"
+            data-type="Anime-inspired Illustration"
+            data-year="2025"
+            data-medium="Digital illustration"
+            data-image="images/Chainsawman_Art.jpeg"
+            data-description="A surreal poolside scene with strong color contrast, expressive characters, and chaotic background energy. The composition mixes playful character interaction with an intense supernatural atmosphere."
+          >
+            <div class="thumb image-thumb">
+              <img src="images/Chainsawman_Art.jpeg" alt="Anime-inspired pool scene artwork">
+            </div>
 
-          <div class="project-info">
-            <p>Anime-inspired illustration • 2025</p>
-            <h3>Poolside Chaos</h3>
-            <span>Open project →</span>
-          </div>
-        </button>
+            <div class="project-info">
+              <p>Anime-inspired illustration • 2025</p>
+              <h3>Poolside Chaos</h3>
+              <span>Open project →</span>
+            </div>
+          </button>
 
-        <button
-          class="project-card reveal"
-          data-category="illustration"
-          data-title="And The Rainbow"
-          data-type="Poster Illustration"
-          data-year="2025"
-          data-medium="Digital illustration"
-          data-image="images/Buff_Fighter_Art.jpeg"
-          data-description="A poster-style anime artwork using warm red tones, dramatic framing, layered smoke shapes, and gothic-inspired text. The piece has a bold cover-art feeling with a strong central character focus."
-        >
-          <div class="thumb image-thumb">
-            <img src="images/Buff_Fighter_Art.jpeg" alt="And The Rainbow anime-style artwork">
-          </div>
+          <button
+            class="project-card reveal"
+            data-category="illustration"
+            data-title="And The Rainbow"
+            data-type="Poster Illustration"
+            data-year="2025"
+            data-medium="Digital illustration"
+            data-image="images/Buff_Fighter_Art.jpeg"
+            data-description="A poster-style anime artwork using warm red tones, dramatic framing, layered smoke shapes, and gothic-inspired text. The piece has a bold cover-art feeling with a strong central character focus."
+          >
+            <div class="thumb image-thumb">
+              <img src="images/Buff_Fighter_Art.jpeg" alt="And The Rainbow anime-style artwork">
+            </div>
 
-          <div class="project-info">
-            <p>Poster illustration • 2025</p>
-            <h3>And The Rainbow</h3>
-            <span>Open project →</span>
-          </div>
-        </button>
+            <div class="project-info">
+              <p>Poster illustration • 2025</p>
+              <h3>And The Rainbow</h3>
+              <span>Open project →</span>
+            </div>
+          </button>
+        </div>
+      </div>
 
-        <button
-          class="project-card reveal"
-          data-category="character"
-          data-title="Ruin Guard"
-          data-type="Character Concept"
-          data-year="2025"
-          data-medium="Digital character art"
-          data-image="images/Ruin_Gaurd_Art.jpeg"
-          data-description="A fantasy character concept focused on silhouette, costume detail, and weapon design. The orange hair, crown-like headpiece, and oversized weapon create a strong mythical character identity."
-        >
-          <div class="thumb image-thumb">
-            <img src="images/Ruin_Gaurd_Art.jpeg" alt="Ruin Guard anime character artwork">
-          </div>
+      <div class="work-group">
+        <div class="work-group-heading reveal">
+          <p class="eyebrow">Character Art</p>
+          <h3>Character-focused concepts and fantasy designs.</h3>
+        </div>
 
-          <div class="project-info">
-            <p>Character concept • 2025</p>
-            <h3>Ruin Guard</h3>
-            <span>Open project →</span>
-          </div>
-        </button>
+        <div class="portfolio-grid">
+          <button
+            class="project-card reveal"
+            data-category="character"
+            data-title="Ruin Guard"
+            data-type="Character Concept"
+            data-year="2025"
+            data-medium="Digital character art"
+            data-image="images/Ruin_Gaurd_Art.jpeg"
+            data-description="A fantasy character concept focused on silhouette, costume detail, and weapon design. The orange hair, crown-like headpiece, and oversized weapon create a strong mythical character identity."
+          >
+            <div class="thumb image-thumb">
+              <img src="images/Ruin_Gaurd_Art.jpeg" alt="Ruin Guard anime character artwork">
+            </div>
 
-        <button
-          class="project-card reveal"
-          data-category="concept"
-          data-title="Halloween Spirit"
-          data-type="Concept Sketch"
-          data-year="2025"
-          data-medium="Digital sketch / concept art"
-          data-image="images/Halloween_Art.jpeg"
-          data-description="A lighter character concept with horror-comedy energy. The torn clothing, creature-like companion, and simple pale colors give the piece a strange but playful Halloween mood."
-        >
-          <div class="thumb image-thumb">
-            <img src="images/Halloween_Art.jpeg" alt="Halloween anime character concept artwork">
-          </div>
+            <div class="project-info">
+              <p>Character concept • 2025</p>
+              <h3>Ruin Guard</h3>
+              <span>Open project →</span>
+            </div>
+          </button>
 
-          <div class="project-info">
-            <p>Concept sketch • 2025</p>
-            <h3>Halloween Spirit</h3>
-            <span>Open project →</span>
-          </div>
-        </button>
+          <button
+            class="project-card reveal"
+            data-category="character"
+            data-title="Halloween Spirit"
+            data-type="Character Concept"
+            data-year="2025"
+            data-medium="Digital sketch / concept art"
+            data-image="images/Halloween_Art.jpeg"
+            data-description="A lighter character concept with horror-comedy energy. The torn clothing, creature-like companion, and simple pale colors give the piece a strange but playful Halloween mood."
+          >
+            <div class="thumb image-thumb">
+              <img src="images/Halloween_Art.jpeg" alt="Halloween anime character concept artwork">
+            </div>
 
+            <div class="project-info">
+              <p>Character concept • 2025</p>
+              <h3>Halloween Spirit</h3>
+              <span>Open project →</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="work-group" id="sketches">
+        <div class="work-group-heading reveal">
+          <p class="eyebrow">Sketches / Studies</p>
+          <h3>Line work, pose studies, and visual experiments.</h3>
+        </div>
+
+        <div class="portfolio-grid">
+          <button
+            class="project-card reveal"
+            data-category="sketch"
+            data-title="Rainbow Impact Sketch"
+            data-type="Sketch Study"
+            data-year="2025"
+            data-medium="Digital sketch"
+            data-image="images/Sketch_01.png"
+            data-description="A dynamic action sketch focused on body weight, impact, and exaggerated anime-style motion. The rainbow background adds energy without overpowering the line work."
+          >
+            <div class="thumb image-thumb sketch-thumb">
+              <img src="images/Sketch_01.png" alt="Rainbow impact anime sketch">
+            </div>
+
+            <div class="project-info">
+              <p>Sketch study • 2025</p>
+              <h3>Rainbow Impact Sketch</h3>
+              <span>Open project →</span>
+            </div>
+          </button>
+
+          <button
+            class="project-card reveal"
+            data-category="sketch"
+            data-title="Winter Campfire Study"
+            data-type="Environment Sketch"
+            data-year="2025"
+            data-medium="Digital sketch"
+            data-image="images/Sketch_02.png"
+            data-description="A quiet scene study using soft blue tones, snowy space, and a warm fire focal point. The piece explores atmosphere, loneliness, and visual contrast."
+          >
+            <div class="thumb image-thumb sketch-thumb wide-thumb">
+              <img src="images/Sketch_02.png" alt="Winter campfire anime sketch">
+            </div>
+
+            <div class="project-info">
+              <p>Environment sketch • 2025</p>
+              <h3>Winter Campfire Study</h3>
+              <span>Open project →</span>
+            </div>
+          </button>
+
+          <button
+            class="project-card reveal"
+            data-category="sketch"
+            data-title="Quiet Gaze Sketch"
+            data-type="Character Sketch"
+            data-year="2025"
+            data-medium="Digital line art"
+            data-image="images/Sketch_03.png"
+            data-description="A character-focused line sketch built around expression, eye detail, and a quiet seated pose. The minimal color makes the gaze and silhouette stand out."
+          >
+            <div class="thumb image-thumb sketch-thumb">
+              <img src="images/Sketch_03.png" alt="Quiet character gaze sketch">
+            </div>
+
+            <div class="project-info">
+              <p>Character sketch • 2025</p>
+              <h3>Quiet Gaze Sketch</h3>
+              <span>Open project →</span>
+            </div>
+          </button>
+
+          <button
+            class="project-card reveal"
+            data-category="sketch"
+            data-title="Claw Gesture Study"
+            data-type="Gesture Sketch"
+            data-year="2025"
+            data-medium="Digital line art"
+            data-image="images/Sketch_04.png"
+            data-description="A gesture sketch focused on pose, hand shape, and character attitude. The sharp claw-like hand adds a supernatural tone to the movement."
+          >
+            <div class="thumb image-thumb sketch-thumb">
+              <img src="images/Sketch_04.png" alt="Claw gesture anime sketch">
+            </div>
+
+            <div class="project-info">
+              <p>Gesture sketch • 2025</p>
+              <h3>Claw Gesture Study</h3>
+              <span>Open project →</span>
+            </div>
+          </button>
+
+          <button
+            class="project-card reveal"
+            data-category="sketch"
+            data-title="Santa Punch Sketch Sheet"
+            data-type="Animation Sketch"
+            data-year="2025"
+            data-medium="Digital sketch"
+            data-image="images/Sketch_05.png"
+            data-description="A sketch sheet connected to the Santa Punch reel. It shows action posing, character expression, and motion planning before or during the animation process."
+          >
+            <div class="thumb image-thumb sketch-thumb">
+              <img src="images/Sketch_05.png" alt="Santa Punch sketch sheet">
+            </div>
+
+            <div class="project-info">
+              <p>Animation sketch • 2025</p>
+              <h3>Santa Punch Sketch Sheet</h3>
+              <span>Open project →</span>
+            </div>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -250,18 +387,18 @@
           </p>
 
           <p>
-            The portfolio highlights original illustrations, character concepts, poster-style
-            artwork, and experimental anime-inspired visuals. For commissions, collaborations,
-            or creative inquiries, contact Indigo directly by email or Instagram.
+            The portfolio highlights original illustrations, character concepts, sketch studies,
+            poster-style artwork, and experimental anime-inspired visuals. For commissions,
+            collaborations, or creative inquiries, contact Indigo directly by Gmail or Instagram.
           </p>
         </div>
 
         <div class="contact-panel">
-          <a href="mailto:indigoblade609@gmail.com">indigoblade609@gmail.com</a>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer">Open Gmail</a>
           <a href="https://www.instagram.com/indigo_jp/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="javascript:void(0)">TikTok</a>
-          <a href="javascript:void(0)">YouTube</a>
-          <a href="javascript:void(0)">ArtStation</a>
+          <a href="javascript:void(0)" aria-disabled="true">TikTok coming soon</a>
+          <a href="javascript:void(0)" aria-disabled="true">YouTube coming soon</a>
+          <a href="javascript:void(0)" aria-disabled="true">ArtStation coming soon</a>
         </div>
       </div>
     </section>
@@ -291,7 +428,7 @@
           Project description goes here.
         </p>
 
-        <a href="mailto:indigoblade609@gmail.com" class="button primary">Inquire About Work</a>
+        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer" class="button primary">Inquire About Work</a>
       </div>
     </div>
   </div>
@@ -300,7 +437,7 @@
     <p>© 2026 Indigo. All rights reserved.</p>
 
     <div class="footer-links">
-      <a href="mailto:indigoblade609@gmail.com">Email</a>
+      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer">Gmail</a>
       <a href="https://www.instagram.com/indigo_jp/" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="#top">Back to top ↑</a>
     </div>
