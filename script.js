@@ -14,24 +14,38 @@ const modalYear = document.querySelector('#modalYear');
 const modalMedium = document.querySelector('#modalMedium');
 const modalDescription = document.querySelector('#modalDescription');
 const closeModalButtons = document.querySelectorAll('[data-close-modal]');
-const reelVideo = document.querySelector('.reel-video');
 
-if (reelVideo) {
-  reelVideo.muted = true;
-  reelVideo.loop = true;
-  reelVideo.playsInline = true;
+const animationCards = document.querySelectorAll('.animation-card');
+const videoModal = document.querySelector('#videoModal');
+const modalVideo = document.querySelector('#modalVideo');
+const modalVideoSource = document.querySelector('#modalVideoSource');
+const videoModalTitle = document.querySelector('#videoModalTitle');
+const videoModalType = document.querySelector('#videoModalType');
+const videoModalYear = document.querySelector('#videoModalYear');
+const videoModalDescription = document.querySelector('#videoModalDescription');
+const closeVideoModalButtons = document.querySelectorAll('[data-close-video-modal]');
 
-  const playReel = () => {
-    reelVideo.play().catch(() => {
-      console.log('Autoplay was blocked by the browser.');
+const autoplayVideos = document.querySelectorAll('.reel-video, .animation-preview');
+
+if (autoplayVideos.length > 0) {
+  autoplayVideos.forEach((video) => {
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+
+    const playVideo = () => {
+      video.play().catch(() => {
+        console.log('Autoplay was blocked by the browser.');
+      });
+    };
+
+    window.addEventListener('load', playVideo);
+
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) {
+        playVideo();
+      }
     });
-  };
-
-  window.addEventListener('load', playReel);
-  document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) {
-      playReel();
-    }
   });
 }
 
@@ -135,8 +149,53 @@ closeModalButtons.forEach((button) => {
   button.addEventListener('click', closeProjectModal);
 });
 
+animationCards.forEach((card) => {
+  card.addEventListener('click', () => {
+    if (!videoModal || !modalVideo || !modalVideoSource) return;
+
+    modalVideoSource.src = card.dataset.video;
+    modalVideo.load();
+
+    videoModalTitle.textContent = card.dataset.title;
+    videoModalType.textContent = card.dataset.type;
+    videoModalYear.textContent = card.dataset.year;
+    videoModalDescription.textContent = card.dataset.description;
+
+    videoModal.classList.add('open');
+    videoModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+
+    modalVideo.play().catch(() => {
+      console.log('Video is ready, but autoplay in modal was blocked.');
+    });
+  });
+});
+
+function closeVideoModal() {
+  if (!videoModal || !modalVideo || !modalVideoSource) return;
+
+  modalVideo.pause();
+  modalVideo.currentTime = 0;
+  modalVideoSource.src = '';
+  modalVideo.load();
+
+  videoModal.classList.remove('open');
+  videoModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+}
+
+closeVideoModalButtons.forEach((button) => {
+  button.addEventListener('click', closeVideoModal);
+});
+
 window.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && modal && modal.classList.contains('open')) {
-    closeProjectModal();
+  if (event.key === 'Escape') {
+    if (modal && modal.classList.contains('open')) {
+      closeProjectModal();
+    }
+
+    if (videoModal && videoModal.classList.contains('open')) {
+      closeVideoModal();
+    }
   }
 });
