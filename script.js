@@ -27,6 +27,9 @@ const closeVideoModalButtons = document.querySelectorAll('[data-close-video-moda
 
 const autoplayVideos = document.querySelectorAll('.reel-video, .animation-preview');
 
+const contactForm = document.querySelector('.vanda-contact-form');
+const formStatus = document.querySelector('#formStatus');
+
 if (autoplayVideos.length > 0) {
   autoplayVideos.forEach((video) => {
     video.muted = true;
@@ -141,8 +144,10 @@ function closeProjectModal() {
   modal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('modal-open');
 
-  modalImage.src = '';
-  modalImage.alt = '';
+  if (modalImage) {
+    modalImage.src = '';
+    modalImage.alt = '';
+  }
 }
 
 closeModalButtons.forEach((button) => {
@@ -187,6 +192,50 @@ function closeVideoModal() {
 closeVideoModalButtons.forEach((button) => {
   button.addEventListener('click', closeVideoModal);
 });
+
+if (contactForm && formStatus) {
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const formData = new FormData(contactForm);
+
+    formStatus.className = 'form-status';
+    formStatus.textContent = '';
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+    }
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: contactForm.method,
+        body: formData,
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        contactForm.reset();
+        formStatus.className = 'form-status success';
+        formStatus.textContent = 'Thank you for reaching out. Indigo has received your message and will get back to your inquiry as soon as possible.';
+      } else {
+        formStatus.className = 'form-status error';
+        formStatus.textContent = 'Something went wrong. Please try again or contact Indigo through Instagram.';
+      }
+    } catch (error) {
+      formStatus.className = 'form-status error';
+      formStatus.textContent = 'Something went wrong. Please check your connection and try again.';
+    }
+
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+    }
+  });
+}
 
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
