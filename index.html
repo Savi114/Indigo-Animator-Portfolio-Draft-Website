@@ -56,10 +56,7 @@
 
         <div class="hero-actions">
           <a href="#work" class="button primary">View Work</a>
-          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer" class="button ghost">
-            <i class="fa-solid fa-envelope"></i>
-            Contact via Gmail
-          </a>
+          <a href="#info" class="button ghost">Contact Indigo</a>
         </div>
       </div>
 
@@ -380,35 +377,63 @@
       </div>
     </section>
 
-    <section id="info" class="info section-pad reveal">
-      <div class="info-card">
-        <div>
-          <p class="eyebrow">Info & Contact</p>
+    <section id="info" class="contact-section section-pad reveal">
+      <div class="contact-form-wrap">
+        <p class="eyebrow">Contact</p>
 
-          <h2>Hi, I’m Indigo.</h2>
+        <h2>Please contact Indigo</h2>
 
-          <p>
-            Indigo is an anime-inspired illustrator and character artist focused on surreal
-            character art, expressive color, and fantasy-driven visual storytelling. Their work
-            combines bold character design, dreamlike compositions, and dramatic atmosphere.
-          </p>
+        <p class="contact-intro">
+          For commissions, collaborations, animation work, or general inquiries,
+          send a message through the form below. You can also reach Indigo through Instagram.
+        </p>
 
-          <p>
-            The portfolio highlights original illustrations, character concepts, sketchbook studies,
-            poster-style artwork, and experimental anime-inspired animation. For commissions,
-            collaborations, or creative inquiries, contact Indigo directly by Gmail or Instagram.
-          </p>
-        </div>
+        <form class="vanda-contact-form" action="https://formspree.io/f/mlgkzaal" method="POST">
+          <input type="hidden" name="_subject" value="New message from Indigo Portfolio Website">
 
-        <div class="contact-panel">
-          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Open Gmail</span>
-          </a>
+          <div class="form-row">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
 
+          <div class="form-row">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="instagram">Instagram Handle</label>
+            <input type="text" id="instagram" name="instagram" placeholder="@username">
+          </div>
+
+          <div class="form-row">
+            <label for="inquiry">Inquiry Type *</label>
+            <select id="inquiry" name="inquiry" required>
+              <option value="">Select one</option>
+              <option value="Commission">Commission</option>
+              <option value="Animation Work">Animation Work</option>
+              <option value="Collaboration">Collaboration</option>
+              <option value="General Message">General Message</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" placeholder="Write a message..." required></textarea>
+          </div>
+
+          <button type="submit" class="button primary contact-submit">
+            <i class="fa-solid fa-paper-plane"></i>
+            Send Message
+          </button>
+
+          <p class="form-status" id="formStatus"></p>
+        </form>
+
+        <div class="contact-social-row">
           <a href="https://www.instagram.com/indigo_jp/" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-instagram"></i>
-            <span>Instagram</span>
+            Instagram
           </a>
         </div>
       </div>
@@ -439,8 +464,7 @@
           Project description goes here.
         </p>
 
-        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer" class="button primary">
-          <i class="fa-solid fa-envelope"></i>
+        <a href="#info" class="button primary" data-close-modal>
           Inquire About Work
         </a>
       </div>
@@ -451,10 +475,7 @@
     <p>© 2026 Indigo. All rights reserved.</p>
 
     <div class="footer-links">
-      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=indigoblade609@gmail.com&amp;su=Commission%20Inquiry%20for%20Indigo" target="_blank" rel="noopener noreferrer">
-        <i class="fa-solid fa-envelope"></i>
-        Gmail
-      </a>
+      <a href="#info">Contact</a>
 
       <a href="https://www.instagram.com/indigo_jp/" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-instagram"></i>
